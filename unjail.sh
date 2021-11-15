@@ -14,7 +14,7 @@ stchaincli query staking validator $(stchaincli keys show $NICKNAME \
 --bech val --address --keyring-backend test) \
 --trust-node \
 --node `cat "$HOME/.stchaind/config/config.toml" \
-| grep -oPm1 "(?<=^laddr = \")([^%]+)(?=\")"` > 1  
+| grep -oPm1 "(?<=^laddr = \")([^%]+)(?=\")"` | grep jailed > 1  
 
 
 
